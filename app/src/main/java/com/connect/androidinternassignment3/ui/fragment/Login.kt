@@ -101,12 +101,10 @@ class Login : Fragment(),AuthListener {
         firebaseAuth = MainActivity().getInstanceOfFirebase()
 
         //Gmail Login
-        /*val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
-            .requestIdToken(getString(R.string.default_web_client_id))
-            .requestEmail()
-            .build()
+        val gso = GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+            .requestIdToken(getString(R.string.default_web_client_id)).requestEmail().build()
 
-        mGoogleSignInClient = GoogleSignIn.getClient(requireActivity(), gso)*/
+        mGoogleSignInClient = GoogleSignIn.getClient(requireActivity(), gso)
         binding.googleLogin.setOnClickListener {
             GlobalScope.launch(Dispatchers.IO) {
                 resultLauncher.launch(mGoogleSignInClient.signInIntent)
