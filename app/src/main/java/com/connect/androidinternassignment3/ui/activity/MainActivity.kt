@@ -9,7 +9,6 @@ import android.os.Bundle
 import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import androidx.navigation.Navigation
 import com.connect.androidinternassignment3.R
 import com.connect.androidinternassignment3.databinding.ActivityMainBinding
 import com.connect.androidinternassignment3.ui.fragment.Home
@@ -38,6 +37,14 @@ class MainActivity : BaseActivity() {
         binding.tabLayout.setupWithViewPager(binding.viewPager)
     }
 
+    override fun onStart() {
+        super.onStart()
+        val firebaseUser = FirebaseAuth.getInstance().currentUser
+        if (firebaseUser != null){
+            this.supportFragmentManager.beginTransaction().add(R.id.fragment_container,Home()).commit()
+        }
+    }
+
     fun showAlertDialog(requireContext: Context) : AlertDialog{
         val builder: AlertDialog.Builder = AlertDialog.Builder(requireContext)
         val view = layoutInflater.inflate(R.layout.progressdialog,null)
@@ -47,6 +54,8 @@ class MainActivity : BaseActivity() {
         progressDialog.window!!.attributes.windowAnimations = android.R.style.Animation_Toast
 
         return progressDialog
+
+
     }
 
     fun getInstanceOfFirebase(): FirebaseAuth{

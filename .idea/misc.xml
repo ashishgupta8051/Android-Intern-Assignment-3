@@ -9,9 +9,16 @@
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/drawable/background.xml" value="0.15462962962962962" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/drawable/button_background.xml" value="0.15092592592592594" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/drawable/card_background.xml" value="0.15092592592592594" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/drawable/circle_image_background.xml" value="0.18177083333333333" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/drawable/edittext_background.xml" value="0.16927083333333334" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/drawable/ic_baseline_10k_24.xml" value="0.15462962962962962" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/drawable/ic_baseline_email_24.xml" value="0.20260416666666667" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/drawable/image_background.xml" value="0.15092592592592594" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/drawable/image_selector_active.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/drawable/image_selector_inactive.xml" value="0.18697916666666667" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/drawable/more_icon.xml" value="0.16927083333333334" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/drawable/notifications_icon.xml" value="0.16927083333333334" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/drawable/search_icon.xml" value="0.16927083333333334" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/drawable/select_background.xml" value="0.15462962962962962" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/drawable/selecter.xml" value="0.20260416666666667" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/drawable/tab_background.xml" value="0.15092592592592594" />
@@ -19,16 +26,25 @@
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/drawable/tab_selector.xml" value="0.15462962962962962" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/drawable/tab_unselcted.xml" value="0.15462962962962962" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/drawable/tab_unselcted_left.xml" value="0.15462962962962962" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/drawable/view_background.xml" value="0.16927083333333334" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/font/comfortaa.xml" value="0.15462962962962962" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/font/offer_list.xml" value="0.20104166666666667" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/font/roboto.xml" value="0.15462962962962962" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/font/roboto_light.xml" value="0.15462962962962962" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/layout-v21/fragment_sign_up.xml" value="0.18645833333333334" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/layout/activity_main.xml" value="0.2" />
-        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/layout/fragment_home.xml" value="0.17083333333333334" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/layout/best_sellers_list.xml" value="0.34562697576396206" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/layout/category_list.xml" value="0.22" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/layout/choice_list.xml" value="0.16" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/layout/fragment_home.xml" value="0.18" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/layout/fragment_login.xml" value="0.3961038961038961" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/layout/fragment_sign_up.xml" value="0.25" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/layout/fragment_splash_screen.xml" value="0.17083333333333334" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/layout/image_slider_list.xml" value="0.17083333333333334" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/layout/more_product_list.xml" value="0.33" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/layout/offer_list.xml" value="0.17083333333333334" />
         <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/layout/progressdialog.xml" value="0.25" />
+        <entry key="..\:/Users/LENOVO/AndroidStudioProjects/AndroidInternAssignment3/app/src/main/res/layout/top_offers_list.xml" value="0.33" />
       </map>
     </option>
   </component>

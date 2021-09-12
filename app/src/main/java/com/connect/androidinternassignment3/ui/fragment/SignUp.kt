@@ -9,7 +9,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-import androidx.navigation.Navigation
 import com.connect.androidinternassignment3.R
 import com.connect.androidinternassignment3.databinding.FragmentSignUpBinding
 import com.connect.androidinternassignment3.ui.activity.MainActivity
@@ -17,7 +16,7 @@ import com.connect.androidinternassignment3.utils.AuthListener
 import com.connect.androidinternassignment3.utils.MessageUtils
 import com.connect.androidinternassignment3.viewmodel.LoginViewModel
 
-class SignUp : Fragment(),AuthListener {
+class SignUp : BaseFragment(),AuthListener {
 
     private lateinit var binding:FragmentSignUpBinding
     private lateinit var loginViewModel: LoginViewModel

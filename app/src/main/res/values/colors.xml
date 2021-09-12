@@ -12,4 +12,6 @@
     <color name="hint_color">#42000000</color>
     <color name="hint_color2">#69000000</color>
     <color name="silver">#C0C0C0</color>
+    <color name="card_background_color">#f0f3f4</color>
+
 </resources>

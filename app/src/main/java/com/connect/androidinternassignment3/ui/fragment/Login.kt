@@ -5,7 +5,6 @@ import android.app.AlertDialog
 import android.os.Bundle
 import android.text.method.HideReturnsTransformationMethod
 import android.text.method.PasswordTransformationMethod
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -17,21 +16,14 @@ import com.connect.androidinternassignment3.utils.AuthListener
 import com.connect.androidinternassignment3.utils.MessageUtils
 import com.connect.androidinternassignment3.viewmodel.LoginViewModel
 import android.content.Intent
-import android.graphics.Color
-import android.graphics.drawable.ColorDrawable
-import android.provider.ContactsContract.DisplayNameSources.EMAIL
-import android.util.Log
-import android.widget.Toast
 
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import androidx.navigation.Navigation
 import com.connect.androidinternassignment3.R
 import com.facebook.*
 import com.facebook.login.LoginManager
 import com.facebook.login.LoginResult
 import com.google.android.gms.auth.api.signin.GoogleSignIn
-import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 import com.google.android.gms.auth.api.signin.GoogleSignInClient
 
 import com.google.android.gms.common.api.ApiException
@@ -46,20 +38,10 @@ import kotlinx.coroutines.DelicateCoroutinesApi
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
-import java.util.*
 import com.facebook.AccessToken
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions
 
-import com.facebook.AccessTokenTracker
-import com.facebook.GraphResponse
-
-import org.json.JSONObject
-
-import com.facebook.GraphRequest
-import com.facebook.GraphRequest.GraphJSONObjectCallback
-import java.lang.Exception
-
-
-class Login : Fragment(),AuthListener {
+class Login : BaseFragment(),AuthListener {
     private lateinit var binding:FragmentLoginBinding
     private lateinit var loginViewModel: LoginViewModel
     private var check = "Hide"
@@ -110,6 +92,7 @@ class Login : Fragment(),AuthListener {
                 resultLauncher.launch(mGoogleSignInClient.signInIntent)
             }
         }
+
         resultLauncher = registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
             if (result.resultCode == Activity.RESULT_OK) {
                 val data: Intent? = result.data
@@ -133,7 +116,21 @@ class Login : Fragment(),AuthListener {
         binding.facebookLogin.setPermissions(listOf("email","public_profile"))
         binding.facebookLogin.setOnClickListener {
             dialog.show()
-            loginWithFacebook()
+            LoginManager.getInstance().registerCallback(callbackManager, object : FacebookCallback<LoginResult> {
+                override fun onSuccess(loginResult: LoginResult) {
+                    dialog.show()
+                    loginWithFacebook(loginResult.accessToken)
+                }
+
+                override fun onCancel() {
+                    dialog.dismiss()
+                }
+
+                override fun onError(error: FacebookException) {
+                    dialog.dismiss()
+                    MessageUtils().showToastMessage(requireContext(),error.toString())
+                }
+            })
         }
 
         return binding.root
@@ -158,32 +155,22 @@ class Login : Fragment(),AuthListener {
     override fun onSuccess(message: String) {
         MessageUtils().hideProgressBar(binding.loginProgress)
         MessageUtils().showButton(binding.login)
+        if (activity is MainActivity){
+            val mainActivity = activity as MainActivity
+            mainActivity.loadFragment(Home())
+        }
         MessageUtils().showToastMessage(requireContext(),message)
     }
 
-    private fun loginWithFacebook() {
-        LoginManager.getInstance().registerCallback(callbackManager, object : FacebookCallback<LoginResult> {
-            override fun onSuccess(loginResult: LoginResult) {
-                dialog.show()
-                handleFacebookAccessToken(loginResult.accessToken)
-            }
-
-            override fun onCancel() {
-                dialog.dismiss()
-            }
-
-            override fun onError(error: FacebookException) {
-                dialog.dismiss()
-                MessageUtils().showToastMessage(requireContext(),error.toString())
-            }
-        })
-    }
-
-    private fun handleFacebookAccessToken(accessToken: AccessToken) {
+    private fun loginWithFacebook(accessToken: AccessToken) {
         val credential = FacebookAuthProvider.getCredential(accessToken.token)
         firebaseAuth.signInWithCredential(credential).addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 dialog.dismiss()
+                if (activity is MainActivity){
+                    val mainActivity = activity as MainActivity
+                    mainActivity.loadFragment(Home())
+                }
                 MessageUtils().showToastMessage(requireContext(),"Login Successful")
             } else {
                 dialog.dismiss()
@@ -197,6 +184,10 @@ class Login : Fragment(),AuthListener {
         firebaseAuth.signInWithCredential(credential).addOnCompleteListener { task ->
             if (task.isSuccessful) {
                 dialog.dismiss()
+                if (activity is MainActivity){
+                    val mainActivity = activity as MainActivity
+                    mainActivity.loadFragment(Home())
+                }
                 MessageUtils().showToastMessage(requireContext(),"Login Successful")
             } else {
                 MessageUtils().showToastMessage(requireContext(),task.exception.toString())
@@ -204,4 +195,5 @@ class Login : Fragment(),AuthListener {
             }
         }
     }
+
 }

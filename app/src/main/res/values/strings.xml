@@ -25,4 +25,11 @@
     <string name="register_now">Register Now</string>
     <string name="don_t_have_an_account">Don\'t have an Account ?</string>
     <string name="pleaseWaitTxt">Please wait ...</string>
+    <string name="home">HOME</string>
+    <string name="search">Search</string>
+    <string name="category">Category</string>
+    <string name="best_sellers">BEST SELLERS</string>
+    <string name="back_to_the_city">TOP OFFERS</string>
+    <string name="more_to_love">MORE TO LOVE</string>
+
 </resources>
