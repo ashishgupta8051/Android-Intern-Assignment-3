@@ -25,7 +25,6 @@ class HomeViewModel(application: Application) : AndroidViewModel(application) {
         return homeRepository.getViewPagerImage()
     }
 
-
     fun addOffer(offer: Offer) = viewModelScope.launch(Dispatchers.IO) {
         homeRepository.addOffer(offer)
     }
