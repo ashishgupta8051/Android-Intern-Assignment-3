@@ -1,52 +1,54 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.cardview.widget.CardView
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:layout_margin="4dp"
-    app:cardCornerRadius="10dp"
-    android:background="@color/white"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="200dp"
-        android:layout_height="wrap_content">
+    <androidx.cardview.widget.CardView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
+        app:cardCornerRadius="10dp"
+        android:background="@color/white">
 
-        <ImageView
-            android:id="@+id/best_sellers_image"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:scaleType="centerCrop"
-            android:src="@drawable/best_s_4"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintLeft_toLeftOf="parent"
-            app:layout_constraintRight_toRightOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="200dp"
+            android:layout_height="wrap_content">
 
-        <View
-            android:id="@+id/best_sellers_view"
-            android:layout_width="wrap_content"
-            android:layout_height="20dp"
-            android:background="@color/red"
-            app:layout_constraintTop_toBottomOf="@id/best_sellers_image"
-            app:layout_constraintLeft_toLeftOf="@id/best_sellers_image"
-            app:layout_constraintRight_toRightOf="@id/best_sellers_image"/>
+            <ImageView
+                android:id="@+id/best_sellers_image"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/best_s_4"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
 
-        <TextView
-            android:id="@+id/best_sellers_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            tools:text="Best Sellers"
-            android:textSize="10sp"
-            android:fontFamily="@font/ubuntu_bold"
-            android:textColor="@color/white"
-            android:maxLines="1"
-            app:layout_constraintTop_toTopOf="@id/best_sellers_view"
-            app:layout_constraintLeft_toLeftOf="@+id/best_sellers_view"
-            app:layout_constraintRight_toRightOf="@+id/best_sellers_view"
-            app:layout_constraintBottom_toBottomOf="@id/best_sellers_view"/>
+            <View
+                android:id="@+id/best_sellers_view"
+                android:layout_width="wrap_content"
+                android:layout_height="20dp"
+                android:background="@color/red"
+                app:layout_constraintTop_toBottomOf="@id/best_sellers_image"
+                app:layout_constraintLeft_toLeftOf="@id/best_sellers_image"
+                app:layout_constraintRight_toRightOf="@id/best_sellers_image" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            <TextView
+                android:id="@+id/best_sellers_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="Best Sellers"
+                android:textSize="10sp"
+                android:fontFamily="@font/ubuntu_bold"
+                android:textColor="@color/white"
+                android:maxLines="1"
+                app:layout_constraintTop_toTopOf="@id/best_sellers_view"
+                app:layout_constraintLeft_toLeftOf="@+id/best_sellers_view"
+                app:layout_constraintRight_toRightOf="@+id/best_sellers_view"
+                app:layout_constraintBottom_toBottomOf="@id/best_sellers_view" />
 
-</androidx.cardview.widget.CardView>
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+</layout>
