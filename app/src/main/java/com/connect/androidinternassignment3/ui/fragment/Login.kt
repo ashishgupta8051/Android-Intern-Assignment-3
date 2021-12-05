@@ -51,7 +51,6 @@ class Login : BaseFragment(),AuthListener {
     private lateinit var firebaseAuth: FirebaseAuth
     private lateinit var callbackManager:CallbackManager
 
-
     @OptIn(DelicateCoroutinesApi::class)
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View {
         binding = FragmentLoginBinding.inflate(inflater,container,false)
